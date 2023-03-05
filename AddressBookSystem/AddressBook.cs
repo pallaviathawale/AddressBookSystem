@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AddressBookSystem
 {
+
     internal class AddressBooks
     {
         List<Contact> addressBookList = new List<Contact>();
@@ -104,6 +105,24 @@ namespace AddressBookSystem
                             break;
                     }
                     Console.WriteLine("Contact Edited Successfully");
+                }
+                else
+                {
+                    Console.WriteLine("No Contact Exists with this First Name : " + firstName);
+                }
+            }
+        }
+        public void DeleteContact()
+        {
+            Console.WriteLine("Enter the First Name to Check : ");
+            string firstName = Console.ReadLine();
+            foreach (Contact data in addressBookList)
+            {
+                if (data.FirstName == firstName)
+                {
+                    addressBookList.Remove(data);
+                    Console.WriteLine("Contact delete Scccessfully");
+                    return;
                 }
                 else
                 {
