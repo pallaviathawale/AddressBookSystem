@@ -112,40 +112,57 @@ namespace AddressBookSystem
                 }
             }
         }
-        public void DeleteContact()
+        public void AddMultipleContact()
         {
-            Console.WriteLine("Enter the First Name to Check : ");
-            string firstName = Console.ReadLine();
-            foreach (Contact data in addressBookList)
+            Console.WriteLine("Enter the number of Contacts to Add : ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            if (n > 0)
             {
-                if (data.FirstName == firstName)
+                for (int i = 0; i < n; i++)
                 {
-                    addressBookList.Remove(data);
-                    Console.WriteLine("Contact delete Scccessfully");
-                    return;
-                }
-                else
-                {
-                    Console.WriteLine("No Contact Exists with this First Name : " + firstName);
+                    AddContact();
                 }
             }
-        }
-        public void DisplayContact()
-        {
-            Console.WriteLine("Contact Details");
-            foreach (Contact display in addressBookList)
+            else
             {
-                Console.WriteLine(display.FirstName);
-                Console.WriteLine(display.LastName);
-                Console.WriteLine(display.Email);
-                Console.WriteLine(display.PhoneNo);
-                Console.WriteLine(display.Address);
-                Console.WriteLine(display.State);
-                Console.WriteLine(display.City);
-                Console.WriteLine(display.ZipCode);
+                Console.WriteLine("Enter the correct Number");
             }
         }
+        //public void DeleteContact()
+        //{
+        //    Console.WriteLine("Enter the First Name to Check : ");
+        //    string firstName = Console.ReadLine();
+        //    foreach (Contact data in addressBookList)
+        //    {
+        //        if (data.firstName == firstName)
+        //        {
+        //            addressBookList.Remove(data);
+        //            Console.WriteLine("Contact delete Scccessfully");
+        //            return;
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("No Contact Exists with this First Name : " + firstName);
+        //        }
+        //    }
+        //}
+        //public void DisplayContact()
+        //{
+        //    Console.WriteLine("Contact Details");
+        //    foreach (Contact display in addressBookList)
+        //    {
+        //        Console.WriteLine(display.firstName);
+        //        Console.WriteLine(display.lastName);
+        //        Console.WriteLine(display.email);
+        //        Console.WriteLine(display.phoneNo);
+        //        Console.WriteLine(display.address);
+        //        Console.WriteLine(display.state);
+        //        Console.WriteLine(display.city);
+        //        Console.WriteLine(display.zipCode);
+        //    }
+        //}
     }
+
 }
     
 

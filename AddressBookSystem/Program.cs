@@ -19,14 +19,14 @@
                     case 2:
                         Book.AddContact();
                         break;
-                    case 3:
-                        Book.DisplayContact();
-                        break;
-                    case 4:
-                        Book.EditContact();
-                        break;
-                    case 5:
-                        Book.DeleteContact();
+                    //case 3:
+                    //    Book.DisplayContact();
+                    //    break;
+                    //case 4:
+                    //    Book.EditContact();
+                    //    break;
+                    //case 5:
+                    //    Book.DeleteContact();
                         break;
                     case 22:
                         flag = false;
@@ -39,4 +39,5 @@
             Console.ReadLine();
         }
     }
+
 }
